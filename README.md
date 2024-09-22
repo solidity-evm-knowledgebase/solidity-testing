@@ -36,7 +36,7 @@ function testIsAlwaysGetZeroFuzz(uint256 data) public {
 
 The above example is an example of a stateless fuzz test, where the state of the previous run is discarded for every new run.
 
-### Stateful Fuzzing
+### Stateful Fuzzing (Invariant Testing)
 
 Fuzzing where the final state of the previous run is the starting state of the next run
 
@@ -61,3 +61,9 @@ contract ContractTest is StdInvariant, Test {
 Foundry would then call our functions in a random order and using random data.
 
 P.S: In foundry invariants usually means stateful fuzzing, and fuzzing means stateless fuzzing
+
+#### Handler-Based Testing
+
+Setup an Invariants contract where we define our invariants. In the setup function we will target a handler contract.
+
+The handler contract will call functions of our contract in specific ways and make sure that the environment is set to properly fuzz test the contract.
