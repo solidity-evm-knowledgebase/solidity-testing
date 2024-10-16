@@ -20,7 +20,7 @@ Invariant: Property of the system that should always hold
 
 Example: 
 
-```
+```solidity
 function testIsAlwaysGetZeroFuzz(uint256 data) public {
   exampleContract.doStuff(data);
   assert(exampleContract.shouldAlwaysBeZero() == 0);
@@ -44,7 +44,7 @@ Fuzzing where the final state of the previous run is the starting state of the n
 
 import StdInvariant, inherit it in the Test Contract and needs to be inialized in the setUp function. Then we can write our statefull fuzz function:
 
-```
+```solidity
 import {StdInvariant} from "forge-std/StdInvariant.sol"
 contract ContractTest is StdInvariant, Test {
   function setUp() {
