@@ -6,6 +6,7 @@
 - integrations test --> test the scripts
 - forked tests --> run unit tests on a fork of mainnet or testnet
 - staging tests --> run tests directly on mainnet or testnet
+- static analysis
 
 - fuzzing
 - stateful fuzz
@@ -67,3 +68,9 @@ P.S: In foundry invariants usually means stateful fuzzing, and fuzzing means sta
 Setup an Invariants contract where we define our invariants. In the setup function we will target a handler contract.
 
 The handler contract will call functions of our contract in specific ways and make sure that the environment is set to properly fuzz test the contract.
+
+## Static Analysis
+
+Use tools to examine the code without actually executing it.
+
+We can use tools like [Slither](https://github.com/crytic/slither) or [Aderyn](https://github.com/Cyfrin/aderyn). 
