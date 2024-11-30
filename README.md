@@ -73,4 +73,16 @@ The handler contract will call functions of our contract in specific ways and ma
 
 Use tools to examine the code without actually executing it.
 
-We can use tools like [Slither](https://github.com/crytic/slither) or [Aderyn](https://github.com/Cyfrin/aderyn). 
+- [slither](https://github.com/crytic/slither)
+- [aderyn](https://github.com/Cyfrin/aderyn)
+
+## Formal Verification/ Symbolic execution
+
+Formal Verification is the act of proving or disproving a given property of a system using a mathematical model.
+
+Symbolic execution is one technique used for formal verification. It explores different paths in a program, creating a mathematical representation for each path (converting the code into mathematical expressions).
+
+Steps:
+
+1) Convert Code to Math
+2) Run through solver
